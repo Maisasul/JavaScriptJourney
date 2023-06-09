@@ -1,0 +1,24 @@
+.main
+{
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    width: 50vw;
+    align-items: center;
+}
+.section1
+{
+    border: 1px solid cornflowerblue;
+    background-color: azure;
+}
+#section2
+{
+    border: 1px solid cornflowerblue;
+    background-color: azure;
+}
+.section3
+{
+    border: 1px solid cornflowerblue;
+    background-color: azure;
+}
