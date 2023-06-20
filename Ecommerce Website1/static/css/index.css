@@ -1,0 +1,285 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Andika New Basic', sans-serif;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF4F4;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFF4F4;
+    /* margin-top: 10px; */
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+}
+.nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.con
+{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+.logo
+{
+    font-size: 1.1rem;
+    color: #606C5D;
+    font-weight: 600;
+    text-decoration: none;
+}
+#cartIcon
+{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.cart
+{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #fff;
+    transition: 0.3s;
+}
+.cart.active
+{
+    right: 0;
+}
+.cart-title
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+.cart-img
+{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    padding: 10px;
+}
+.cart-box
+{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.detail-box
+{
+    display: grid;
+    row-gap: .5rem;
+
+}
+.Pname
+{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.pPrice
+{
+    font-weight: 500;
+}
+.Quantity
+{
+    border: 1px solid #606C5D;
+    outline-color: #F7EFE5;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.delete
+{
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+.total
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid #606C5D;
+}
+.total-title
+{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price
+{
+    margin-left: .5rem;
+}
+.btn-buy
+{
+    display: flex;
+    margin: 1.5rem auto 0 auto; 
+    padding: 12px 20px;
+    border: none;
+    background: #606C5D;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover
+{
+    box-shadow: 0 0 20px#606C5D;
+}
+#close-cart
+{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.card
+{
+    position: relative;
+    width: 280px;
+    height: 380px;
+    /* background-color: #000; */
+    box-shadow: 0 15px 45px rgba(0,0,0,.1);
+    display: flex;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    right: 8%;
+}
+.card:hover
+{
+    width: 600px;
+}
+.card .imgP
+{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card .imgP img
+{
+    max-width: 250px;
+    transition: 0.5s ease-in-out;
+}
+.card:hover .imgP img
+{
+    transform: rotate(-35deg) translateX(-20px);
+}
+.card .details 
+{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #606C5D;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    flex-direction: column;
+}
+.card .details::before
+{
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+.card .details h3
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+.card .details h4
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+}
+.card .details p
+{
+    color: #fff;
+    opacity: .35;
+    font-size: .8em;
+}
+.card .details .group
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.card .details .group h2
+{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.card .details .group h2 sup
+{
+    font-weight: 300;
+}
+.card .details .group h2 small
+{
+    font-size: .7em;
+}
+.card .details .group a
+{
+    display: inline-flex;
+    padding: 10px 25px;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #606C5D;
+}
+.cart-con
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 85%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.1);
+    margin-bottom: 0;
+}
